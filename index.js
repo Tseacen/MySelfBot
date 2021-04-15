@@ -2,10 +2,20 @@ const config = require("./config.js");
 const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 
-
 bot.on("ready", async () => {
     console.log("Connected")
+
+    if(!config.user) {
+        console.log("User not find. Bot was deconnected")
+        process.exit(1)
+    }
+
     let user = bot.users.cache.get(config.user);
+
+    if(!user) {
+        console.log("User not find. Bot was deconnected")
+        process.exit(1)
+    }
             
     bot.user.setAvatar(`${user.displayAvatarURL()}`);
     if(config.changeUsername === "true") {
