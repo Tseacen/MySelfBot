@@ -1,6 +1,6 @@
 module.exports = {
-    "token": "NTgzNjkxNzI0NDIxODU3Mjkx.XPADRw.KpLHjpreZ8AmUVMJWh73vWr3emE",
-    "user":"313768730700152833",
+    "token": "Your Token",
+    "user":"Your ID",
 
     "changeUsername":"false"
   };
